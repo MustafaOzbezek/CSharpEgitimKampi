@@ -1,133 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _01_MainSubjects
+namespace _02_Variables
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            #region YazdırmaKomutları
-            //Console.WriteLine("Merhaba Dünya");
-            //Console.Write("Selam");
-            //Console.WriteLine("***** Yemek Katogoriler *****");
+
+            #region Double Değişkenler
+
+            ////double number;
+            ////number = 4.85;
+            ////Console.WriteLine(number);
+
+            //Console.WriteLine("***** Fiyat Listesi *****");
             //Console.WriteLine();
-            //Console.WriteLine("1-Çorbalar");
-            //Console.WriteLine("2-Ana Yemekler");
-            //Console.WriteLine("3-Soğuk Başlangıçlar");
-            //Console.WriteLine("4-Salatalar");
-            //Console.WriteLine("5-Tatlılar");
-            //Console.WriteLine("6-İçecekler");
+
+            //double applePrice, orangePrice, strawberryPrice, potatoPrice, tomatoPrice;
+            //applePrice = 14.85;
+            //orangePrice = 20.95;
+            //strawberryPrice = 45;
+            //potatoPrice = 9.74;
+            //tomatoPrice = 6.88;
+
+            //Console.WriteLine("---- Elma Birim Fİyatı:" + applePrice + "TL");
+            //Console.WriteLine("---- Portakal Birim Fİyatı:" + orangePrice + "TL");
+            //Console.WriteLine("---- Çilek Birim Fİyatı:" + strawberryPrice + "TL");
+            //Console.WriteLine("---- Patates Birim Fİyatı:" + potatoPrice + "TL");
+            //Console.WriteLine("---- Domates Birim Fİyatı:" + tomatoPrice + "TL" );
+
             //Console.WriteLine();
-            //Console.WriteLine("***** Yemek Katogoriler *****");
-
-            #endregion
-
-
-            #region String_Değişkenler 
-
-            //string
-            //Değişken_türü Değişken_adı;
-
-            //string name;
-            //name = "Mustafa";
-            //Console.WriteLine(name);
-
-            //string customerName;
-            //string customerSurname;
-            //string customerPhone;
-            //string customerEmail,district,city;
-
-            //customerName = "Ali";
-            //customerSurname = "Çınar";
-            //customerPhone = "+90 500 30 20";
-            //customerEmail = "deneme@gmail.com";
-            //district = "Kadıköy";
-            //city = "İstanbul";
-
-            //Console.WriteLine("***** Rezarvasyon Kartı *****");
             //Console.WriteLine();
-            //Console.WriteLine("------------------------------------------------");
-            //Console.WriteLine("Müşteri :" + customerName + " " + customerSurname );
-            //Console.WriteLine("İletişim :" + customerPhone );
-            //Console.WriteLine("Email Adresi :" + customerEmail);
-            //Console.WriteLine("Adres :" + district + "/" + city);
-            //Console.WriteLine("------------------------------------------------");
+
+            //double appleGram, orangeGram, strawberryGram, potatoGram, tomatoGram;
+            //appleGram = 1.245;
+            //orangeGram = 2.650;
+            //strawberryGram = 0.750;
+            //potatoGram = 4.859;
+            //tomatoGram = 3.745;
 
 
-
-            #endregion
-
-            #region Int Değişkenler 
-
-            //int number = 24;
-            //Console.WriteLine(number);
-
-            int hamburgerPrice = 300;
-            int cokePrice = 35;
-            int waterPrice = 10;
-            int friesPrice = 50;
-            int pizzaPrice = 250;
-            int lemonadePrice = 30;
-
-            Console.WriteLine("**** Restoran Menü Fİyatı ****");
-            Console.WriteLine();
-            Console.WriteLine("----Hamburger: " + hamburgerPrice + "TL");
-            Console.WriteLine("----:Pizza " + pizzaPrice + "TL");
-            Console.WriteLine("----Kola: " + cokePrice + "Tl" );
-            Console.WriteLine("----Limonata: " + lemonadePrice + "TL");
-            Console.WriteLine("----Kızartma : " + friesPrice + "TL" );
-            Console.WriteLine("----Su: " +  waterPrice + "TL");
-            Console.WriteLine();
-            Console.WriteLine("**** Restoran Menü Fİyatı ****");
-
-            Console.WriteLine();
-            int hamburgerCount;
-            int cokeCount;
-            int waterCount;
-            int friesCount;
-            int pizzaCount;
-            int lemonadeCount;
-
-            int totalHamburgerPrice;
-            int totalCokePrice;
-            int totalWaterPrice;
-            int totalFriesPrice;
-            int totalPizzaPrice;
-            int totalLemonadePrice;
-
-
-            hamburgerCount = 3;
-            cokeCount = 3;
-            waterCount = 3;
-            friesCount = 1;
-            pizzaCount = 0;
-            lemonadeCount = 0;
-
-            totalHamburgerPrice = hamburgerCount*hamburgerPrice;
-            totalCokePrice = cokeCount * cokePrice;
-            totalWaterPrice = waterCount*waterPrice;
-            totalPizzaPrice= pizzaCount*pizzaPrice;
-            totalLemonadePrice = lemonadePrice * lemonadeCount;
-            totalFriesPrice = friesCount * friesPrice;
-                
+            //double appleTotalPrice = appleGram * applePrice;
+            //double orangeTotalPrice = orangeGram * orangePrice;
+            //double strawberryTotalPrice = strawberryGram * strawberryPrice;
+            //double potateTotalPrice = potatoGram * potatoPrice;
+            //double tomatoTotalPrice = tomatoGram * tomatoPrice; 
 
 
 
 
-            Console.WriteLine("------------------------------");
-            Console.WriteLine("Hamburger Tutarı :" + totalHamburgerPrice + "Tl");
-            Console.WriteLine("Pizza Tutarı :" + totalPizzaPrice + "Tl");
-            Console.WriteLine("Kızartma  Tutarı :" + totalFriesPrice + "Tl");
-            Console.WriteLine("Kola Tutarı :" + totalCokePrice + "Tl");
-            Console.WriteLine("Limonata Tutarı :" + totalLemonadePrice + "Tl");
-            Console.WriteLine("Su Tutarı :" + totalWaterPrice + "Tl");
-            Console.WriteLine();
-            int totalPrice = totalCokePrice + totalFriesPrice + totalHamburgerPrice + totalLemonadePrice + totalPizzaPrice + totalWaterPrice; ;
-            Console.WriteLine("Toplam Ödenecek Tutar :" + totalPrice + "TL");
+            //Console.WriteLine("Alınan Ürün : Elma " + "Birim Fiyat: " + applePrice + " - Gramaj: "  + appleGram + "  - Toplam Fiyat : " +appleTotalPrice);
+            //Console.WriteLine("Alınan Ürün : Portakal " + "Birim Fiyat: " + orangePrice + " - Gramaj: " + orangeGram + "  - Toplam Fiyat : " + orangeTotalPrice);
+            //Console.WriteLine("Alınan Ürün : Çilek " + "Birim Fiyat: " + strawberryPrice + " - Gramaj: " + strawberryGram + "  - Toplam Fiyat : " + strawberryTotalPrice);
+            //Console.WriteLine("Alınan Ürün : Patates " + "Birim Fiyat: " + potatoPrice + " - Gramaj: " + potatoGram + "  - Toplam Fiyat : " + potateTotalPrice);
+            //Console.WriteLine("Alınan Ürün : Domates " + "Birim Fiyat: " + tomatoPrice + " - Gramaj: " + tomatoGram + "  - Toplam Fiyat : " + tomatoTotalPrice);
+
+
+            //double shoppingTotalPrice = appleTotalPrice + orangeTotalPrice + strawberryTotalPrice + potateTotalPrice + tomatoTotalPrice;
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("Alışveriş Toplam Tutar : " + shoppingTotalPrice + "TL");
+
+
+
+
+
+
+
+
+
 
 
 
@@ -139,10 +85,144 @@ namespace _01_MainSubjects
             #endregion
 
 
+            #region Char Değişkenler 
+
+            //char symbol;
+            //symbol ='a';
+            //Console.WriteLine(symbol);
+
+
+
+
+
+
+
+
+            #endregion
+
+            #region Klavyeden Veri Girişleri String Değişkenler
+
+
+            //Console.WriteLine(" **** Csharp Hava Yolları Yolcu Bilgisi **** ");
+            //Console.WriteLine();
+
+            //string passengerName, passengerSurname, passengerDistrict, passengerCity, passengerAge, passengerİdentityNumber;
+            //Console.Write("Yolcu Adı: ");
+            //passengerName = Console.ReadLine();
+
+
+            //Console.Write("Yolcu Soyadı: ");
+            //passengerSurname = Console.ReadLine();
+
+            //Console.Write("İlçe Bilgisi: ");
+            //passengerDistrict = Console.ReadLine();
+
+            //Console.Write("Şehir Bilgisi: ");
+            //passengerCity = Console.ReadLine();
+
+            //Console.Write("Yolcu Yaş Bilgisi: ");
+            //passengerAge = Console.ReadLine();
+
+            //Console.Write("TC Kimlik Bilgisi: ");
+            //passengerİdentityNumber = Console.ReadLine();
+
+
+
+
+            //Console.WriteLine();
+            //Console.WriteLine("-------------------------");
+
+
+            //Console.WriteLine( " Yolcu Kimlik No:" + passengerİdentityNumber + "  - Yolcu Ad Soyad: " + passengerName + " " + passengerSurname + " " + passengerDistrict + "/" + passengerCity + " " + passengerAge + " "  );
+
+
+
+            #endregion
+
+            #region Klavyeden Tam Sayı Girişleri ve Dönüşümler 
+
+            //int shoesPrice, computerPrice, chairPrice, tvPrice;
+            //shoesPrice = 1000;
+            //computerPrice = 20000;
+            //chairPrice = 5000;
+            //tvPrice = 12000;
+
+
+            //int shoesCount, computerCount, chairCount, tvCount;
+
+            //Console.Write("Lütfen aldığınız ayakkabı sayısını giriniz: ");
+            //shoesCount = int.Parse (Console.ReadLine());
+
+
+            //Console.Write("Lütfen aldığınız bilgisayar sayısını giriniz: ");
+            //computerCount = int.Parse(Console.ReadLine());
+
+
+            //Console.Write("Lütfen aldığınız sandalye  sayısını giriniz: ");
+            //chairCount = int.Parse(Console.ReadLine());
+
+            //Console.Write("Lütfen aldığınız televizyon  sayısını giriniz: ");
+            //tvCount = int.Parse(Console.ReadLine());
+
+            //int totalPrice = shoesCount * shoesPrice + computerCount * computerPrice + chairCount * chairPrice + tvCount * tvPrice; ;
+
+            //Console.WriteLine();
+            //Console.WriteLine("Toplam ödemiz gereken tutar : " + totalPrice + "TL");
+
+
+
+
+
+
+            #endregion
+
+
+            #region Klavyeden Ondalıklı Sayı İşlemleri 
+
+            //double exam1, exam2, exam3, result;
+
+            //Console.Write("Lütfen 1.Sınav notunu giriniz : ");
+            //exam1=double.Parse(Console.ReadLine());
+
+
+            //Console.Write("Lütfen 2.Sınav notunu giriniz : ");
+            //exam2 = double.Parse(Console.ReadLine());
+
+
+            //Console.Write("Lütfen 3.Sınav notunu giriniz : ");
+            //exam3 = double.Parse(Console.ReadLine());
+
+
+            //result= (exam1+exam2 + exam3)/3 ;
+            //Console.WriteLine();
+            //Console.WriteLine("Sınav Ortalamanız :" + result);
+
+
+            #endregion
+
+            #region Klavyeden Karakter Girişleri
+            char gender;
+            Console.WriteLine("Lütfen Cinsiyet Seçiniz");
+            gender =char.Parse(Console.ReadLine());
+            Console.WriteLine("Seçtiğiniz Cinsiyet: " + gender);
+          
+
+
+
+
+
+
+
+
+
+
+
+            #endregion
 
 
 
             Console.Read();
+
 
         }
     }
